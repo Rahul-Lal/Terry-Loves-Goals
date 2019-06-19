@@ -15,3 +15,7 @@ server.use(express.urlencoded({ extended: false }))
 
 // routes
 server.use('/', routes)
+server.use('/terry-loves-goals', routes)
+server.use('/terry-loves-goals/:id', routes)
+server.use('/terry-loves-goals/accomplished', routes)
+server.use('/terry-loves-goals/failed', routes)
