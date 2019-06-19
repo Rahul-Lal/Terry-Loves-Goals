@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/Rahul-Lal/Terry-Loves-Goals/issues"
   },
-  "homepage": "https://github.com/Rahul-Lal/Terry-Loves-Goals#readme"
+  "homepage": "https://github.com/Rahul-Lal/Terry-Loves-Goals#readme",
+  "dependencies": {
+    "express-handlebars": "^3.1.0"
+  }
 }
