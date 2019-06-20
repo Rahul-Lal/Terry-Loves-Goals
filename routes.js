@@ -14,12 +14,12 @@ routes.get('/terry-loves-goals', (req, res) => {
   res.render('goals/index', data)
 })
 
-routes.get('/terry-loves-goals/:id', (req, res) => {
-  const goalData = data.goals.find(goal => {
-    return goal.id == req.params.id
-  })
-  res.render('goals/view', goalData)
-})
+// routes.get('/terry-loves-goals/:id', (req, res) => {
+//   const goalData = data.goals.find(goal => {
+//     return goal.id == req.params.id
+//   })
+//   res.render('goals/view', goalData)
+// })
 
 routes.get('/terry-loves-goals/accomplished', (req, res) => {
   res.render('goals/accomplished', data)

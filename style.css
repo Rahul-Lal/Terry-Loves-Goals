@@ -1,14 +1,19 @@
-body
+button
 {
-  background-image: url('/public/image/terry-background.jpg')
+  background-color: transparent;
 }
 
-.accomplished
+text
 {
-
+  color: white;
 }
 
-.failed
+.accomplished, .accomplished:active, .accomplished:visited
 {
-  
+  color: green;
+}
+
+.failed, .failed:active, .failed:visited
+{
+  color: red;
 }
