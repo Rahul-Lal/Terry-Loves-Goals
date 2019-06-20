@@ -1,0 +1,19 @@
+button
+{
+  background-color: transparent;
+}
+
+text
+{
+  color: white;
+}
+
+.accomplished, .accomplished:active, .accomplished:visited
+{
+  color: green;
+}
+
+.failed, .failed:active, .failed:visited
+{
+  color: red;
+}

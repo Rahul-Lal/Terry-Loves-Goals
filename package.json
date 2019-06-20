@@ -1,0 +1,35 @@
+{
+  "name": "terry-loves-goals",
+  "version": "1.0.0",
+  "description": "A goal list",
+  "main": "index.js",
+  "author": "LAL, Rahul Janki",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "homepage": "https://github.com/Rahul-Lal/Terry-Loves-Goals#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rahul-Lal/Terry-Loves-Goals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rahul-Lal/Terry-Loves-Goals/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.1.2",
+    "nodemon": "^1.19.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "Terry",
+    "Goals",
+    "Node",
+    "Yogurt"
+  ]
+}

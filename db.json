@@ -1,0 +1,44 @@
+{
+  "Goals": [
+    {
+      "id": 1,
+      "Name": "Solve 100 Cases",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "Name": "Bring back my favourite mango yogurt",
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "Name": "Lay off Cacao Nibs for 30 days",
+      "isCompleted": false
+    },
+    {
+      "id": 4,
+      "Name": "Try Austrian yogurt",
+      "isCompleted": false
+    },
+    {
+      "id": 5,
+      "Name": "Eat 10,000 calories to mantain muscle mass",
+      "isCompleted": false
+    },
+    {
+      "id": 6,
+      "Name": "`Destroy` the silver-painted breakdancer in battle",
+      "isCompleted": false
+    },
+    {
+      "id": 7,
+      "Name": "Build the fairy princess castle for Cagney and Lacey",
+      "isCompleted": false
+    },
+    {
+      "id": 8,
+      "Name": "Die saving the president",
+      "isCompleted": false
+    }
+  ]
+}
