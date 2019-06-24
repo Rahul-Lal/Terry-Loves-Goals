@@ -33,8 +33,8 @@
     .accomplished,
     .accomplished:active,
     .accomplished:visited {
-      color: green;
-      font-family: 'Bangers', cursive;
+      color: limegreen;
+      font-family: 'Barlow Condensed', sans-serif;
       text-decoration: none;
     }
 
@@ -47,7 +47,7 @@
     .failed:active,
     .failed:visited {
       color: red;
-      font-family: 'Bangers', cursive;
+      font-family: 'Barlow Condensed', sans-serif;
       text-decoration: none;
     }
 
@@ -81,13 +81,14 @@
   <h1>Terry Loves Goals</h1>
   <ul>
     {{#each Goals}}
-    <li>{{ Name }}<br />
+    <li>{{ Name }} | <a class="edit" href="/terry-loves-goals/edit/{{id}}">Edit</a> <br />
       <a class="accomplished" href="/terry-loves-goals/accomplished">Accomplished</a> |
       <a class="failed" href="/terry-loves-goals/failed">Unaccomplished</a>
     </li><br />
     {{/each}}
     <li>
-      <input id="insertGoalText" type="text" /> <input id="insertGoalSubmit" type="submit" />
+      <input id="insertGoalText" type="text" />
+      <input id="insertGoalSubmit" type="submit" />
     </li>
   </ul>
 </div>
