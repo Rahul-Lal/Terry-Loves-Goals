@@ -6,6 +6,12 @@ const fs = require('fs')
 
 module.exports = routes
 
+/*
+  router.('', (req, res) => {
+    res.()
+  })
+*/
+
 routes.get('/', (req, res) => {
   res.redirect('/terry-loves-goals')
 })
@@ -16,7 +22,7 @@ routes.get('/terry-loves-goals', (req, res) => {
 
 routes.get('/terry-loves-goals/edit/:id', (req, res) => {
   const goalData = data.Goals.find(goal => {
-    return goal.id === req.params.id
+    return goal.id == req.params.id
   })
 
   const filePath = path.join(__dirname, JSON.stringify(data))

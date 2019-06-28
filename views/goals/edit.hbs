@@ -1,7 +1,91 @@
-<form class="form" action="/goals/edit/{{id}}" method="put">
-  <label for="name" class="form-item">
-    Name:
-    <input type="text" name="name" value="{{name}}">
-  </label>
-  <input type="submit" name="" value="Submit">
-</form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Terry Loves Goals | Edit</title>
+  <style>
+    h1 {
+      color: white;
+      font-family: 'Bangers', cursive;
+      font-size: 50px;
+    }
+
+    li {
+      color: white;
+      list-style-type: none;
+      font-family: 'Bangers', cursive;
+      font-size: 25px;
+    }
+
+    img {
+      width: 66%;
+      height: 66%;
+    }
+
+    .accomplished,
+    .accomplished:active,
+    .accomplished:visited {
+      color: limegreen;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-decoration: none;
+    }
+
+    .accomplished:hover,
+    .failed:hover {
+      font-weight: bolder;
+    }
+
+    .failed,
+    .failed:active,
+    .failed:visited {
+      color: red;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-decoration: none;
+    }
+
+    #editGoalText {
+      background-color: transparent;
+      outline-color: silver;
+      color: white;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      width: 250px;
+      height: 33px;
+    }
+
+    #editGoalSubmit {
+      background-color: transparent;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: bolder;
+      outline-color: silver;
+      color: white;
+      font-size: 18px;
+      width: 250px;
+      height: 40px;
+    }
+
+    .goBack {
+      color: white;
+      font-family: 'Bangers', cursive;
+      font-size: 33px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body style="background-image: url('/image/terry-cheery.gif'); height: 752px; background-position: center; background-repeat: no-repeat; background-size: cover;">
+  <div align='center'>
+    <form class="form" action="/terry-loves-goals/edit/{{id}}" method="put">
+      <label for="name" class="form-item">
+        <h1>What's Your CHANGED Goal: </h1>
+        <input id="editGoalText" type="text" name="name" value="{{Name}}">
+      </label>
+      <input id="editGoalSubmit" type="submit" name="submit" value="Update">
+    </form>
+    <br /><br />
+    <a class="goBack" href="/terry-loves-goals/">Go Back</a>
+  </div>
+</body>
