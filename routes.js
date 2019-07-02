@@ -17,6 +17,7 @@ routes.get('/', (req, res) => {
 })
 
 routes.get('/terry-loves-goals', (req, res) => {
+  
   res.render('goals/index', data)
 })
 
@@ -36,6 +37,31 @@ routes.get('/terry-loves-goals/edit/:id', (req, res) => {
 
   res.render('goals/edit', goalData)
 })
+
+routes.post('/terry-loves-goals/edit/:id', (req, res) => {
+  let reqBody = JSON.parse(JSON.stringify(req.body))
+  let nameData = reqBody.name
+  // console.log(reqBody)
+  // console.log(nameData)
+  // const goalData = data.Goals.find(goal => {
+  //   return goal.id == req.params.id
+  // })
+
+  const filePath = path.join(__dirname)
+  console.log(filePath)
+  fs.writeFile(filePath, JSON.stringify(nameData), (err) => {
+    if (err) {
+      console.error(err)
+    } else {
+      res.redirect('/terry-loves-goals')
+      console.log('There, it is done!')
+    }
+  })
+})
+
+// routes.post('/terry-loves-goals', (req, res) => {
+//   res.render()
+// })
 
 routes.get('/terry-loves-goals/accomplished', (req, res) => {
   res.render('goals/accomplished', data)
