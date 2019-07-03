@@ -64,9 +64,9 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
     else {
 
       for(let i = 0; i < goals.length; i++) {
-        if (goals[i].id == goalID) {
+        if (Number(goals[i].id) === goalID) {
           let goalie = editedGoal
-          return res.render('/terry-loves-goals', goalie)
+          res.render('/terry-loves-goals', goalie)
         }
         else {
           res.send('Terry never made that goal!')
@@ -89,9 +89,18 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
 
 })
 
-// routes.post('/terry-loves-goals', (req, res) => {
-//   res.render()
-// })
+routes.post('/terry-loves-goals', (req, res) => {
+  fs.writeFile(filePath, JSON.parse(goals), (err) => {
+    if (err) {
+      console.error(err)
+    }
+    else {
+      res.redirect('/terry-loves-goals')
+  console.log('Terry writing a file!')
+}
+})
+res.render()
+})
 
 routes.get('/terry-loves-goals/accomplished', (req, res) => {
   console.log('Terry is really DISAPPOINTED in you!')
