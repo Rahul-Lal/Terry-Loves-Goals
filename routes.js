@@ -13,11 +13,12 @@ module.exports = routes
 */
 
 routes.get('/', (req, res) => {
+  console.log('Terry`s redirecting')
   res.redirect('/terry-loves-goals')
 })
 
 routes.get('/terry-loves-goals', (req, res) => {
-  
+  console.log('TERRY`S HOME!!!!')  
   res.render('goals/index', data)
 })
 
@@ -31,7 +32,7 @@ routes.get('/terry-loves-goals/edit/:id', (req, res) => {
     if (err) {
       console.error(err)
     } else {
-      console.log('There, it is done!')
+      console.log('Terry`s gonna edit a goal!')
     }
   })
 
@@ -49,12 +50,12 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
 
   const filePath = path.join(__dirname)
   console.log(filePath)
-  fs.writeFile(filePath, JSON.stringify(nameData), (err) => {
+  fs.writeFile(filePath, nameData, (err) => {
     if (err) {
       console.error(err)
     } else {
-      res.redirect('/terry-loves-goals')
-      console.log('There, it is done!')
+      res.render('/terry-loves-goals')
+      console.log('Terry edited a goal!')
     }
   })
 })
@@ -64,10 +65,12 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
 // })
 
 routes.get('/terry-loves-goals/accomplished', (req, res) => {
+  console.log('Terry is really DISAPPOINTED in you!')
   res.render('goals/accomplished', data)
 })
 
 routes.get('/terry-loves-goals/failed', (req, res) => {
+  console.log('Terry is really PROUD of you!')
   res.render('goals/failed', data)
 })
 
