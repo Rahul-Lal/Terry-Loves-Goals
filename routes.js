@@ -55,7 +55,7 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
 
   const filePath = path.join(__dirname, 'db.json')
   console.log(filePath)
-  const goals = JSON.parse(data)
+  let goals = JSON.stringify(data)
 
   fs.readFile(filePath, 'utf8', (err) => {
     if (err) {
@@ -64,7 +64,7 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
     else {
 
       for(let i = 0; i < goals.length; i++) {
-        if (goals[i] == goalID) {
+        if (goals[i].id == goalID) {
           let goalie = editedGoal
           return res.render('/terry-loves-goals', goalie)
         }
@@ -73,7 +73,7 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
         }
       }
       
-      fs.writeFile(filePath, JSON.stringify(goals), (err) => {
+      fs.writeFile(filePath, JSON.parse(goals), (err) => {
         if (err) {
           console.error(err)
         }
