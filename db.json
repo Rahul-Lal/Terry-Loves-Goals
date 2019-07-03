@@ -1,36 +1,36 @@
 {
-  "Goals": [
-    {
-      "id": 1,
-      "Name": "Solve 100 Cases"
-    },
-    {
-      "id": 2,
-      "Name": "Bring back my favourite mango yogurt"
-    },
-    {
-      "id": 3,
-      "Name": "Lay off Cacao Nibs for 30 days"
-    },
-    {
-      "id": 4,
-      "Name": "Try Austrian yogurt"
-    },
-    {
-      "id": 5,
-      "Name": "Eat 10,000 calories to mantain muscle mass"
-    },
-    {
-      "id": 6,
-      "Name": "`Destroy` the silver-painted breakdancer in battle"
-    },
-    {
-      "id": 7,
-      "Name": "Build the fairy princess castle for Cagney and Lacey"
-    },
-    {
-      "id": 8,
-      "Name": "Die saving the president"
-    }
-  ]
-}
+    "Goals": [
+      {
+        "id": 1,
+        "Name": "Solve 100 Cases"
+      },
+      {
+        "id": 2,
+        "Name": "Bring back my favourite mango yogurt"
+      },
+      {
+        "id": 3,
+        "Name": "Lay off Cacao Nibs for 30 days"
+      },
+      {
+        "id": 4,
+        "Name": "Try Austrian yogurt"
+      },
+      {
+        "id": 5,
+        "Name": "Eat 10,000 calories to mantain muscle mass"
+      },
+      {
+        "id": 6,
+        "Name": "`Destroy` the silver-painted breakdancer in battle"
+      },
+      {
+        "id": 7,
+        "Name": "Build the fairy princess castle for Cagney and Lacey"
+      },
+      {
+        "id": 8,
+        "Name": "Die saving the president"
+      }
+    ]
+  }

@@ -40,24 +40,53 @@ routes.get('/terry-loves-goals/edit/:id', (req, res) => {
 })
 
 routes.post('/terry-loves-goals/edit/:id', (req, res) => {
-  let reqBody = JSON.parse(JSON.stringify(req.body))
-  let nameData = reqBody.name
+  let nameData = req.body.name
+  let goalID = Number(req.params.id)
+  let editedGoal = {
+    id: goalID,
+    name: req.params.Name 
+  }
   // console.log(reqBody)
   // console.log(nameData)
   // const goalData = data.Goals.find(goal => {
   //   return goal.id == req.params.id
   // })
 
-  const filePath = path.join(__dirname)
+
+  const filePath = path.join(__dirname, 'db.json')
   console.log(filePath)
-  fs.writeFile(filePath, nameData, (err) => {
+  const goals = JSON.parse(data)
+
+  fs.readFile(filePath, 'utf8', (err) => {
     if (err) {
       console.error(err)
-    } else {
-      res.render('/terry-loves-goals')
-      console.log('Terry edited a goal!')
+    }
+    else {
+
+      for(let i = 0; i < goals.length; i++) {
+        if (goals[i] == goalID) {
+          let goalie = editedGoal
+          return res.render('/terry-loves-goals', goalie)
+        }
+        else {
+          res.send('Terry never made that goal!')
+        }
+      }
+      
+      fs.writeFile(filePath, JSON.stringify(goals), (err) => {
+        if (err) {
+          console.error(err)
+        }
+        else {
+          res.redirect('/terry-loves-goals')
+      console.log('Terry writing a file!')
     }
   })
+
+      console.log('Terry reading a file!')
+    }
+  })
+
 })
 
 // routes.post('/terry-loves-goals', (req, res) => {
