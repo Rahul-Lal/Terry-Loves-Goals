@@ -40,11 +40,11 @@ routes.get('/terry-loves-goals/edit/:id', (req, res) => {
 })
 
 routes.post('/terry-loves-goals/edit/:id', (req, res) => {
-  let nameData = req.body.name
+  let nameData = req.body.Name
   let goalID = Number(req.params.id)
   let editedGoal = {
     id: goalID,
-    name: req.params.Name 
+    Name: nameData 
   }
   // console.log(reqBody)
   // console.log(nameData)
@@ -55,7 +55,7 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
 
   const filePath = path.join(__dirname, 'db.json')
   console.log(filePath)
-  let goals = JSON.stringify(data)
+  let goals = data
 
   fs.readFile(filePath, 'utf8', (err) => {
     if (err) {
@@ -90,6 +90,8 @@ routes.post('/terry-loves-goals/edit/:id', (req, res) => {
 })
 
 routes.post('/terry-loves-goals', (req, res) => {
+  const newGoal = document.getElementById('')
+  
   fs.writeFile(filePath, JSON.parse(goals), (err) => {
     if (err) {
       console.error(err)
