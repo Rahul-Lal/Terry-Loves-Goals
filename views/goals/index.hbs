@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Terry Loves Goals | Home</title>
+  <style>
+  body
+  {
+    background-image: url('.\public\image\terry-pecs.gif');
+    height: 752px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    h1
+    {
+      color: silver;
+      font-family: 'Bangers', cursive;
+      font-size: 50px;
+    }
+    
+    li {
+      color: whitesmoke;
+      list-style-type: none;
+      font-family: 'Bangers', cursive;
+      font-size: 25px;
+    }
+
+    img
+    {
+      width: 66%;
+      height: 66%;
+    }
+
+    .accomplished,
+    .accomplished:active,
+    .accomplished:visited {
+      color: limegreen;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-decoration: none;
+    }
+
+    .accomplished:hover, .failed:hover
+    {
+      font-weight: bolder;
+    }
+
+    .failed,
+    .failed:active,
+    .failed:visited {
+      color: red;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-decoration: none;
+    }
+
+    #insertGoalText
+    {
+      background-color: transparent;
+      outline-color: silver;
+      color: white;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      width: 250px;
+      height: 33px;
+    }
+
+    .edit, .edit:hover, .edit:active, .edit:visited
+    {
+      color:yellow;
+    }
+
+    #insertGoalSubmit
+    {
+      background-color: transparent;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: bolder;
+      outline-color: silver;
+      color: white;
+      font-size: 18px;
+      width: 250px;;
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+<div align="center">
+  <h1>Terry Loves Goals</h1>
+  <ul>
+    {{#each goals}}
+    <li>{{ name }} | <a class="edit" href="/terry-loves-goals/edit/{{id}}">Edit</a> <br />
+      <a class="accomplished" href="/terry-loves-goals/accomplished">Accomplished</a> |
+      <a class="failed" href="/terry-loves-goals/failed">Unaccomplished</a>
+    </li><br />
+    {{/each}}
+    <li>
+      <input id="insertGoalText" type="text" />
+      <input id="insertGoalSubmit" type="submit" />
+    </li>
+  </ul>
+</div>
+</body>
+
+</html>
