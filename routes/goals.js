@@ -18,4 +18,39 @@ router.get('/terry-loves-goals', (req, res) => {
     })
 })
 
+router.get('/terry-loves-goals/accomplished', (req, res) => {
+  //const id = req.params.id
+
+  // db.deleteGoals(id)
+  // .then(() => {
+    res.render('goals/accomplished', db)
+    console.log('Terry is really PROUD in you!')
+  // })
+})
+
+router.get('/terry-loves-goals/unaccomplished', (req, res) => {
+  // const id = req.params.id
+
+  // db.deleteGoals(id)
+  // .then(() => {
+    res.render('goals/failed', db)
+    console.log('Terry is really DISAPPOINTED of you!')
+  // })
+})
+
+router.post('/terry-loves-goals', (req, res) => {
+  let goal = req.body
+  console.log(goal)
+
+  db.addGoals(goal)
+  .then(goalId => {
+    console.log(`${goalId}`)
+    res.render('/terry-loves-goals', { goalId})
+    console.log(`Terry's been added`)
+  })
+  .catch(err => {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+})
+
 module.exports = router

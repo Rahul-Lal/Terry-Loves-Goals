@@ -4,7 +4,9 @@ const connection = require('knex')(config)
 
 module.exports = {
   getGoal: getGoal,
-  getGoals: getGoals
+  getGoals: getGoals,
+  addGoals: addGoals,
+  deleteGoals: deleteGoals
 }
 
 function getGoals (db = connection) {
@@ -13,4 +15,16 @@ function getGoals (db = connection) {
 
 function getGoal (id, db = connection) {
   return db('goals').where('id', id).first()
+}
+
+function addGoals (goal, db = connection) {
+
+  return db('goals')
+  .insert({ name: goal.name})
+}
+
+function deleteGoals(id, db = connection) {
+  return db('goals')
+  .where('id', id)
+  .del()
 }

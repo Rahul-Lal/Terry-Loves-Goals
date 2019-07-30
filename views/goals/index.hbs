@@ -12,7 +12,7 @@
   <style>
   body
   {
-    background-image: url('.\public\image\terry-pecs.gif');
+    background-image: url('../image/terry-pecs.gif');
     height: 752px;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,20 +47,20 @@
       text-decoration: none;
     }
 
-    .accomplished:hover, .failed:hover
+    .accomplished:hover, .unaccomplished:hover
     {
       font-weight: bolder;
     }
 
-    .failed,
-    .failed:active,
-    .failed:visited {
+    .unaccomplished,
+    .unaccomplished:active,
+    .unaccomplished:visited {
       color: red;
       font-family: 'Barlow Condensed', sans-serif;
       text-decoration: none;
     }
 
-    #insertGoalText
+    #name
     {
       background-color: transparent;
       outline-color: silver;
@@ -97,11 +97,11 @@
     {{#each goals}}
     <li>{{ name }} | <a class="edit" href="/terry-loves-goals/edit/{{id}}">Edit</a> <br />
       <a class="accomplished" href="/terry-loves-goals/accomplished">Accomplished</a> |
-      <a class="failed" href="/terry-loves-goals/failed">Unaccomplished</a>
+      <a class="unaccomplished" href="/terry-loves-goals/unaccomplished">Unaccomplished</a>
     </li><br />
     {{/each}}
     <li>
-      <input id="insertGoalText" type="text" />
+      <input id="name" type="text" />
       <input id="insertGoalSubmit" type="submit" />
     </li>
   </ul>
