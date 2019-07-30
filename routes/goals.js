@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/terry-loves-goals/accomplished', (req, res) => {
+router.get('/accomplished', (req, res) => {
   //const id = req.params.id
 
   // db.deleteGoals(id)
@@ -24,7 +24,7 @@ router.get('/terry-loves-goals/accomplished', (req, res) => {
   // })
 })
 
-router.get('/terry-loves-goals/unaccomplished', (req, res) => {
+router.get('/unaccomplished', (req, res) => {
   // const id = req.params.id
 
   // db.deleteGoals(id)
@@ -34,7 +34,7 @@ router.get('/terry-loves-goals/unaccomplished', (req, res) => {
   // })
 })
 
-router.post('/terry-loves-goals', (req, res) => {
+router.post('/', (req, res) => {
   let goal = req.body
   console.log(goal)
 

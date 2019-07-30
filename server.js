@@ -15,8 +15,7 @@ server.use(express.urlencoded({extended: true}))
 // Routes
 
 server.use('/', userRoutes)
-server.use('/terry-loves-goals', userRoutes)
-server.use('/terry-loves-goals/accomplished', userRoutes)
-server.use('/terry-loves-goals/unaccomplished', userRoutes)
+server.use('/accomplished', userRoutes)
+server.use('/unaccomplished', userRoutes)
 
 module.exports = server
