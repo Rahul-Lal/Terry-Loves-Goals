@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
       res.render('goals/index', {goals: goals})
     })
     .catch(err => {
-      res.send('DATABASE ERROR: ' + err.message)
+      console.log('DATABASE ERROR: ' + err.message)
     })
 })
 
@@ -45,7 +45,7 @@ router.post('/terry-loves-goals', (req, res) => {
     console.log(`Terry's been added`)
   })
   .catch(err => {
-    res.send('DATABASE ERROR: ' + err.message)
+    console.log('DATABASE ERROR: ' + err.message)
   })
 })
 
