@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
       res.render('goals/index', {goals: goals})
     })
     .catch(err => {
-      res.status(500).send('DATABASE ERROR: ' + err.message)
+      res.send('DATABASE ERROR: ' + err.message)
     })
 })
 
