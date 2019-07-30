@@ -1,0 +1,10 @@
+2019-07-30T05:47:07.958183+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=terry-loves-goals.herokuapp.com request_id=4d25162a-189a-4cc4-8885-c02299652799 fwd="118.92.115.221" dyno= connect= service= status=503 bytes= protocol=https
+2019-07-30T05:47:10.388312+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=terry-loves-goals.herokuapp.com request_id=53b0def3-1510-405a-bbbc-b892eb02d799 fwd="118.92.115.221" dyno= connect= service= status=503 bytes= protocol=https
+2019-07-30T05:48:51.404117+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=terry-loves-goals.herokuapp.com request_id=73da9cfd-977b-4630-9231-8fb0365700c0 fwd="118.92.115.221" dyno= connect= service= status=503 bytes= protocol=https
+2019-07-30T05:48:52.949719+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=terry-loves-goals.herokuapp.com request_id=5cef6c94-4ff0-46bd-a473-4968099d53ed fwd="118.92.115.221" dyno= connect= service= status=503 bytes= protocol=https
+2019-07-30T05:50:27.769831+00:00 app[api]: Starting process with command `heroku logs --tail` by user rahul21lal@gmail.com
+2019-07-30T05:50:32.055609+00:00 heroku[run.1332]: State changed from starting to up
+2019-07-30T05:50:31.928630+00:00 heroku[run.1332]: Awaiting client
+2019-07-30T05:50:31.954476+00:00 heroku[run.1332]: Starting process with command `heroku logs --tail`
+2019-07-30T05:50:35.965495+00:00 heroku[run.1332]: Process exited with status 127
+2019-07-30T05:50:35.987578+00:00 heroku[run.1332]: State changed from up to complete
