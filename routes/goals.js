@@ -45,7 +45,7 @@ router.post('/terry-loves-goals', (req, res) => {
     console.log(`Terry's been added`)
   })
   .catch(err => {
-    res.status(500).send('DATABASE ERROR: ' + err.message)
+    res.send('DATABASE ERROR: ' + err.message)
   })
 })
 
