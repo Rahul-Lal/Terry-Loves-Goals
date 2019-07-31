@@ -1,7 +1,7 @@
 const express = require('express')
 const hbs = require('express-handlebars')
 const port = process.env.PORT
-const db = require('../db')
+const db = require('./db')
 
 
 const userRoutes = require('./routes/goals')
