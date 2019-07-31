@@ -14,7 +14,7 @@ server.use(express.urlencoded({extended: true}))
 
 // https://stackoverflow.com/questions/35199384/node-js-error-connect-econnrefused-response-from-server
 server.get('/', function (req, res) {
-    res.send('YEAH BOYYY!!!!!!!')
+    console.log('YEAH BOYYY!!!!!!!')
 })
 
 server.listen(59843, function () {
