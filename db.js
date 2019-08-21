@@ -10,7 +10,8 @@ module.exports = {
 }
 
 function getGoals (db = connection) {
-  return db('goals').select()
+  return db('goals')
+  .select()
 }
 
 function getGoal (id, db = connection) {
