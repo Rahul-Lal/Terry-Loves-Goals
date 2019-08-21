@@ -15,6 +15,10 @@ router.get('/', (req, res) => {
     })
 })
 
+router.listen(48427, function () {
+  console.log('Example app listening on port 48427!');
+ });
+
 router.get('/accomplished', (req, res) => {
   //const id = req.params.id
 
