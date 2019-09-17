@@ -6,6 +6,7 @@ module.exports = {
   getGoal: getGoal,
   getGoals: getGoals,
   addGoals: addGoals,
+  updateGoal: updateGoal,
   deleteGoals: deleteGoals
 }
 
@@ -18,8 +19,13 @@ function getGoal (id, db = connection) {
   return db('goals').where('id', id).first()
 }
 
-function addGoals (goal, db = connection) {
+function updateGoal (id, goal, db = connection) {
+  return db('goals')
+  .update(goal)
+  .where('id', id).first()
+}
 
+function addGoals (goal, db = connection) {
   return db('goals')
   .insert({ name: goal.name})
 }
@@ -27,5 +33,5 @@ function addGoals (goal, db = connection) {
 function deleteGoals(id, db = connection) {
   return db('goals')
   .where('id', id)
-  .del()
+  .delete()
 }

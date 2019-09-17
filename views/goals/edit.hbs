@@ -78,14 +78,15 @@
 
 <body style="background-image: url('/image/terry-cheery.gif'); height: 752px; background-position: center; background-repeat: no-repeat; background-size: cover;">
   <div align='center'>
-    <form class="form" action="/terry-loves-goals/edit/{{id}}" method="post">
+    <form class="form" action="/" method="put">
       <label for="name" class="form-item">
         <h1>What's Your CHANGED Goal: </h1>
-        <input id="editGoalText" type="text" name="name" value="{{Name}}">
+        <h1>{{name}}</h1>
+        <input id="editGoalText" type="text" name="name" value="{{name}}">
       </label>
-      <input id="editGoalSubmit" type="submit" name="" value="Update">
+      <input id="editGoalSubmit" type="submit" name="update" value="update">
     </form>
     <br /><br />
-    <a class="goBack" href="/terry-loves-goals/">Go Back</a>
+    <a class="goBack" href="/">Go Back</a>
   </div>
 </body>
