@@ -60,7 +60,7 @@
       text-decoration: none;
     }
 
-    #name
+    #name,
     {
       background-color: transparent;
       outline-color: silver;
@@ -69,6 +69,21 @@
       font-size: 18px;
       width: 250px;
       height: 33px;
+    }
+
+    .goal
+    .goal:active,
+    .goal:visited
+    {
+      color: white;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px;
+      text-decoration: none;
+    }
+
+    .goal:hover,
+    {
+      text-weight: bold;
     }
 
     .edit, .edit:hover, .edit:active, .edit:visited
@@ -95,9 +110,7 @@
   <h1>Terry Loves Goals</h1>
   <ul>
     {{#each goals}}
-    <li><a class="edit" href="/{{id}}">{{ name }}</a> <br />
-      <a class="accomplished" href="/accomplished">Accomplished</a> |
-      <a class="unaccomplished" href="/unaccomplished">Unaccomplished</a>
+    <li><a class="goal" href="/{{id}}">{{ name }}</a> <br />
     </li><br />
     {{/each}}
     <li>

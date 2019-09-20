@@ -28,20 +28,32 @@
     .accomplished,
     .accomplished:active,
     .accomplished:visited {
+      font-size: 28px;
       color: limegreen;
       font-family: 'Barlow Condensed', sans-serif;
       text-decoration: none;
     }
 
     .accomplished:hover,
-    .unaccomplished:hover {
+    .unaccomplished:hover,
+    .edit:hover {
       font-weight: bolder;
     }
 
     .unaccomplished,
     .unaccomplished:active,
     .unaccomplished:visited {
+      font-size: 28px;
       color: red;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-decoration: none;
+    }
+
+    .edit,
+    .edit:active,
+    .edit:visited {
+      font-size: 28px;
+      color: yellow;
       font-family: 'Barlow Condensed', sans-serif;
       text-decoration: none;
     }
@@ -76,13 +88,16 @@
   </style>
 </head>
 
-<body style="background-image: url('/image/terry-trippy.gif'); height: 752px; background-position: center; background-repeat: no-repeat; background-size: cover;">
+<body
+  style="background-image: url('/image/terry-trippy.gif'); height: 752px; background-position: center; background-repeat: no-repeat; background-size: cover;">
   <div align='center'>]
-        <h1>What's Your CHANGED Goal: </h1>
-        <h1>{{name}}</h1>
+    <h1>What's Your CHANGED Goal: </h1>
+    <h1>{{name}}</h1>
     <br /><br />
+    <a class="accomplished" href="/accomplished">Accomplished</a> |
+    <a class="unaccomplished" href="/unaccomplished">Unaccomplished</a> |
+    <a class="edit" href="/edit/{{id}}">Edit</a>
     <a class="goBack" href="/">Go Back</a>
-    <br /> 
-    <a class="goBack" href="/edit/{{id}}">Edit</a>
+    <br />
   </div>
 </body>

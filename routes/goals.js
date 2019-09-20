@@ -42,15 +42,9 @@ router.put('/edit/:id', (req, res) => {
 
   db.updateGoal(id)
     .then(goals => {
-      res.render('goals/goal', goals)
+      res.render('goals/index', goals)
       console.log('Terry is observing you!')
     })
-})
-
-
-router.get('/accomplished', (req, res) => {
-  res.render('goals/accomplished', db)
-  console.log('Terry is really PROUD in you!')
 })
 
 router.delete('/accomplished', (req, res) => {
@@ -58,12 +52,12 @@ router.delete('/accomplished', (req, res) => {
 
   db.deleteGoals(id)
     .then(() => {
-      res.render('goals/accomplished', db)
       console.log('Terry is really PROUD in you!')
     })
+  res.render('goals/accomplished', goals)
 })
 
-router.get('/unaccomplished', (req, res) => {
+router.delete('/unaccomplished', (req, res) => {
   // const id = req.params.id
 
   // db.deleteGoals(id)

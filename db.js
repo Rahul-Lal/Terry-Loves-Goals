@@ -33,5 +33,5 @@ function addGoals (goal, db = connection) {
 function deleteGoals(id, db = connection) {
   return db('goals')
   .where('id', id)
-  .delete()
+  .del()
 }
